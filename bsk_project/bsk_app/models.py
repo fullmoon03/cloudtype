@@ -7,7 +7,7 @@ from django.contrib.auth import get_user_model
 # Create your models here.
 
 class FlowerPot(models.Model):
-    pot_number = models.IntegerField(primary_key=True)
+    pot_number = models.CharField(primary_key=True, max_length=10)
     plant_name = models.CharField(max_length=255)
     start_date = models.DateField()
     plant_type = models.CharField(max_length=255, blank=True, null=True)

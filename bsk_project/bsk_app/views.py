@@ -191,8 +191,8 @@ class FamilyView(APIView):
         current_user = request.user
         # 현재 사용자의 flower_pot 가져오기
         flower_pot = current_user.flower_pot
-        # 해당 flower_pot을 공유하는 사용자들 가져오기
-        family_members = flower_pot.users.all()
+        # 해당 flower_pot을 공유하는 사용자들 가져오기(본인제외)
+        family_members = flower_pot.users.exclude(id=current_user.id)
         serializer = FamilyMemberSerializer(family_members, many=True, context={
                                             'current_user': current_user})
 
