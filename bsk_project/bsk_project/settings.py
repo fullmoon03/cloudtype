@@ -28,7 +28,14 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
+# cloudtype 내부 문제 - django admin 관련
 CSRF_TRUSTED_ORIGINS = ['https://*.cloudtype.app']
+
+
+# frontend 요청 관련 문제
+CORS_ALLOWED_ORIGINS = [
+    'https://port-0-cloudtype-32updzt2alpmcc05e.sel4.cloudtype.app',
+]
 
 
 # Application definition
@@ -46,7 +53,7 @@ INSTALLED_APPS = [
     'corsheaders',
 ]
 
-CORS_ALLOW_ALL_ORIGINS = True
+
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
