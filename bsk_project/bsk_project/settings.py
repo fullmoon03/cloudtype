@@ -37,6 +37,7 @@ CORS_ALLOWED_ORIGINS = [
     'https://port-0-cloudtype-32updzt2alpmcc05e.sel4.cloudtype.app',
     "http://localhost:3000",
     'https://web-greenlink-front-32updzt2alpmofzlm.sel4.cloudtype.app',
+    'https://main--super-liger-ba1128.netlify.app',
 ]
 
 
