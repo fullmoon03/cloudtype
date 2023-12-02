@@ -11,9 +11,11 @@ from .views import (
 
 urlpatterns = [
     # 관리자용 수분 업데이트 페이지
-    path('update_moisture_level/<int:pot_number>',
-         update_moisture_level, name='update_moisture_level'),
+    # path('update_moisture_level/<int:pot_number>',
+    #      update_moisture_level, name='update_moisture_level'),
 
+    path('update_moisture_level/<str:pot_number>',
+        update_moisture_level, name='update_moisture_level'),
     # 회원가입
     path('signup/', SignUpView.as_view(), name='signup'),
 
